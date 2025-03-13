@@ -1,7 +1,9 @@
-package br.com.alura.films.model;
+package br.com.alura.films;
 
 import br.com.alura.films.calculate.Recommend;
 import br.com.alura.films.calculate.TimeCalculate;
+import br.com.alura.films.model.Episode;
+import br.com.alura.films.model.Movie;
 
 public class Main {
     public static void main(String[] args) {
