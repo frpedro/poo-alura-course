@@ -21,4 +21,11 @@ public class Movie extends Tittle implements Classification {
     public int getClassification() {
         return (int) ratingAverage() / 2;
     }
+
+    // override toString to show movie infos
+    @Override
+    public String toString() {
+        return "Filme: " + getName() + "(" + getYear() + ")";
+    }
 }
+

@@ -5,15 +5,18 @@ import br.com.alura.films.calculate.TimeCalculate;
 import br.com.alura.films.model.Episode;
 import br.com.alura.films.model.Movie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        // create and set a new film (scarface)
-        Movie scarface = new Movie();
+        // create and set a new movie (scarface)
+        var scarface = new Movie();
+        scarface.setName("Scarface");
         scarface.setYear(1973);
         scarface.setMinutesDuration(200);
 
-        // get note of film
+        // get note of movie
         scarface.note(8);
         scarface.note(10);
         scarface.note(10);
@@ -28,17 +31,32 @@ public class Main {
         System.out.println(calculadora.getAllTime());
 
         // create a filter to ranking the movie
-        Recommend filter = new Recommend();
+        var filter = new Recommend();
         filter.filter(scarface);
 
         // create a new episode and set its attributes
-        Episode episodio1 = new Episode();
+        var episodio1 = new Episode();
         episodio1.setName("A procura de um lar");
         episodio1.setNumber(2);
         episodio1.setTotalViews(5000);
 
         // filter episode
         filter.filter(episodio1);
+
+        // create and set a new movie (smurf2)
+        var smurf2 = new Movie();
+        smurf2.setName("Smurf 2");
+        smurf2.setMinutesDuration(200);
+        smurf2.setYear(2009);
+
+       // create a new list and adds already declared movies
+        var films = new ArrayList<>();
+        films.add(scarface);
+        films.add(smurf2);
+
+        // show list and your size
+        System.out.println("Tamanho da lista: " + films.size());
+        System.out.println(films);
 
     }
 }

@@ -32,9 +32,14 @@ public class Tittle {
     public int getMinutesDuration() {
         return minutesDuration;
     }
+    public String getName() {
+        return name;
+    }
+    public int getYear() {
+        return year;
+    }
 
     // methods
-
     // show results
     public void showPrints() {
         System.out.println(name);
