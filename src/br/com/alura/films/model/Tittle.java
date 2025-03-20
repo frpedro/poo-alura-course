@@ -1,5 +1,7 @@
 package br.com.alura.films.model;
 
+import java.time.Year;
+
 public class Tittle {
 
     // attributes
@@ -9,6 +11,12 @@ public class Tittle {
     private double sumReviews;
     private int totalReviews;
     private int minutesDuration;
+
+    // constructors
+    public Tittle(String name, int year) {
+        this.name = name;
+        this.year = year;
+    }
 
     // get and setters
     public int getTotalReviews() {return totalReviews;}
@@ -60,4 +68,5 @@ public class Tittle {
     public double ratingAverage() {
         return sumReviews / totalReviews;
     }
+
 }

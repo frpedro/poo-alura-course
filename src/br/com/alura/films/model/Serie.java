@@ -2,6 +2,12 @@ package br.com.alura.films.model;
 
 public class Serie extends Tittle {
 
+    // constructor
+    public Serie(String name, int year, int seasons) {
+        super(name, year);
+        this.seasons = seasons;
+    }
+
     // attributes
     private int seasons;
     private boolean open;
@@ -27,4 +33,8 @@ public class Serie extends Tittle {
         this.episodesBySeason = episodesBySeason;
     }
 
+    @Override
+    public String toString() {
+        return "Serie: " + getName() + "(" + (getYear()) + ") " + "Temporadas: " + getSeasons();
+    }
 }

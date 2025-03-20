@@ -1,4 +1,4 @@
-package br.com.alura.films;
+package br.com.alura.films.main;
 
 import br.com.alura.films.calculate.Recommend;
 import br.com.alura.films.calculate.TimeCalculate;
@@ -6,13 +6,13 @@ import br.com.alura.films.model.Episode;
 import br.com.alura.films.model.Movie;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
 
         // create and set a new movie (scarface)
-        var scarface = new Movie();
-        scarface.setName("Scarface");
+        var scarface = new Movie("Scarface", 1973);
         scarface.setYear(1973);
         scarface.setMinutesDuration(200);
 
@@ -44,12 +44,11 @@ public class Main {
         filter.filter(episodio1);
 
         // create and set a new movie (smurf2)
-        var smurf2 = new Movie();
-        smurf2.setName("Smurf 2");
+        var smurf2 = new Movie("Smurf 2", 2007);
         smurf2.setMinutesDuration(200);
         smurf2.setYear(2009);
 
-       // create a new list and adds already declared movies
+        // create a new list and adds already declared movies
         var films = new ArrayList<>();
         films.add(scarface);
         films.add(smurf2);
@@ -57,6 +56,5 @@ public class Main {
         // show list and your size
         System.out.println("Tamanho da lista: " + films.size());
         System.out.println(films);
-
     }
 }
