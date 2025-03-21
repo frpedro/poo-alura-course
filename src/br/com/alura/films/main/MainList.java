@@ -4,12 +4,11 @@ import br.com.alura.films.model.Movie;
 import br.com.alura.films.model.Serie;
 import br.com.alura.films.model.Tittle;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class MainList {
     public static void main(String[] args) {
+
         // create objects
         var scarface = new Movie("Scarface", 1973);
         var smurf2 = new Movie("Smurf 2", 2005);
@@ -24,12 +23,12 @@ public class MainList {
         // object reference
         var eph = euphoria;
 
-        // for ache for p
+        // for print list
         for (Tittle catalogPrint: catalog){
             System.out.println(catalogPrint);}
 
         // new list of artists
-        ArrayList<String> artists = new ArrayList<>();
+        List<String> artists = new ArrayList<>();
         artists.add("Adam Sandler");
         artists.add("Patrick");
         artists.add("Antony");
@@ -37,5 +36,8 @@ public class MainList {
         // sort year the catalog list
         catalog.sort(Comparator.comparing(Tittle::getYear));
         System.out.println("Ordenado por ano: " + catalog);
+
+        // create linkedlist
+        List<Tittle> linked  = new LinkedList<>();
     }
 }
