@@ -1,5 +1,8 @@
 package br.com.alura.films.model;
 
+import br.com.alura.films.exception.yearError;
+import com.google.gson.annotations.SerializedName;
+
 import java.time.Year;
 
 public class Tittle {
@@ -16,6 +19,16 @@ public class Tittle {
     public Tittle(String name, int year) {
         this.name = name;
         this.year = year;
+    }
+
+    // constructor of api
+    public Tittle(APITittle api) {
+        this.name = api.title();
+        this.year = Integer.valueOf(api.year());
+
+        if(api.year().length() > 4 ) {
+            throw new yearError("O ano inserido tem mais números do que o esperado.");
+        }
     }
 
     // get and setters
@@ -48,7 +61,8 @@ public class Tittle {
     }
 
     // methods
-    // show results
+
+    // display results
     public void showPrints() {
         System.out.println(name);
         System.out.println(year);
@@ -67,6 +81,12 @@ public class Tittle {
     // calculate the average reviews
     public double ratingAverage() {
         return sumReviews / totalReviews;
+    }
+
+    // to string
+    @Override
+    public String toString() {
+        return "Filme: " + name + " Ano: " + year;
     }
 
 }

@@ -46,13 +46,7 @@ public class Episode implements Classification {
     // override method, compares total views and rank
     @Override
     public int getClassification() {
-        if (totalViews > 100) {
-
-            return 4;
-        }
-        else {
-            return 2;
-        }
-
+        if (totalViews > 100) {return 4;}
+        else {return 2;}
     }
 }

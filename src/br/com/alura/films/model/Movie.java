@@ -5,10 +5,7 @@ import br.com.alura.films.calculate.Classification;
 public class Movie extends Tittle implements Classification {
 
     // constructor
-    public Movie(String name, int year) {
-        super(name, year);
-
-    }
+    public Movie(String name, int year) {super(name, year);}
 
     // attributes
     private String diretor;
