@@ -17,7 +17,7 @@ public class API {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner scanner = new Scanner(System.in); // creates a scanner to capture user input
-        System.out.println("Enter a movie to search: ");
+        System.out.println("Qual filme você está procurando? ");
         var search = scanner.nextLine(); // reads user input and stores it in the `search` variable
 
         // builds the URL for the OMDb API request, replacing spaces with "-"
@@ -50,10 +50,10 @@ public class API {
             System.out.println(mytittle);
         }
         catch (NumberFormatException e) {
-            System.out.println("An error occurred related to the movie's year.");
+            System.out.println("Ocorreu um erro relacionado ao ano do filme.");
         }
         finally {
-            System.out.println("Program Finished!");
+            System.out.println("Programa finalizado!");
         }
 
     }
